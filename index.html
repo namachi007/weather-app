@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Weather App</h1>
+      <p>Enter the city name to know about weather condition</p>
+    </header>
+
+    <main>
+      <form id="weatherForm">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter a city name"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <section id="weatherDisplay" class="card hidden">
+        <h2 id="cityName"></h2>
+        <div class="weather-info">
+          <img id="weatherIcon" src="" alt="Weather Icon" />
+          <div class="weather-details">
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="description"></p>
+          </div>
+        </div>
+      </section>
+
+      <p id="errorMessage" class="error hidden"></p>
+    </main>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
